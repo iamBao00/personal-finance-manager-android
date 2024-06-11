@@ -20,7 +20,19 @@ public class UserRespond {
         @SerializedName("username")
         private String username;
 
+        @SerializedName("balance")
+        private long Balance;
+
         // Constructors, getters, setters
+
+
+        public long getBalance() {
+            return Balance;
+        }
+
+        public void setBalance(long balance) {
+            Balance = balance;
+        }
 
         public String getId() {
             return id;

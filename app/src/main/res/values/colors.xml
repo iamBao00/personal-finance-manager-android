@@ -2,4 +2,50 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#2F2854</color>
+    <color name="colorToolBar">#1A193A</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="purpleJar">#B72AD9</color>
+    <color name="blueJar">#0D84F2</color>
+    <color name="yellowJar">#DBAD06</color>
+    <color name="greenJar">#04D400</color>
+    <color name="cyanJar">#00C7C7</color>
+    <color name="pinkJar">#FF45E1</color>
+    <color name="colorProgress">#FF45E1</color>
+    <color name="background_color">#1F1D44</color>
+    <color name="input_color">#525071</color>
+    <color name="button_color">#7876E6</color>
+    <color name="colorTheme">#1D3A70</color>
+        <color name="purple_200">#FFBB86FC</color>
+        <color name="purple_500">#FF6200EE</color>
+        <color name="purple_700">#FF3700B3</color>
+        <color name="teal_200">#FF03DAC5</color>
+        <color name="teal_700">#FF018786</color>
+
+        <color name="colorThemeText">#1D3A70</color>
+        <color name="colorNormalText">#2D313D</color>
+        <color name="colorAlternativeText">#ffffff</color>
+        <color name="colorSupportText">#8D8F97</color>
+        <color name="colorBackground">#ffffff</color>
+        <color name="colorSupportBackground">#F9FAFB</color>
+
+        <color name="colorBottomNavigationMenu">@color/white</color>
+        <color name="colorButtomNavigationMenuPressed">#1D3A70</color>
+        <color name="colorButtomNavigationMenuEnable">#8D8F97</color>
+
+        <color name="colorRed">#FC0303</color>
+        <color name="colorGreen">#43A047</color>
+
+        <color name="colorShortcut">#1D3A70</color>
+        <!--Hau's color-->
+        <color name="colorTransparentWhite">#cccccc</color>
+        <color name="backgroundInput">#ECEEF0</color>
+        <color name="backgroundWhite">#FFFFFFFF</color>
+        <color name="transparent">#00000000</color>
+        <color name="colorWarning">#fb3</color>
+        <color name="colorBlue">#33b5e5</color>
+        <color name="backgroundBlack">#FF000000</color>
+        <color name="backgroundIcon">#F9FAFB</color>
+        <color name="backgroundStroke">#E5E7EB</color>
 </resources>

@@ -81,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                     System.out.println("ID" + userRespond.getUserDetail().getId());
                     System.out.println("USERNAME" + userRespond.getUserDetail().getUsername());
                     System.out.println("EMAIL" + userRespond.getUserDetail().getEmail());
+                    System.out.println("BALANCE" + userRespond.getUserDetail().getBalance());
 
                      //Xử lý logic khi đăng nhập thành công, ví dụ chuyển sang MainActivity
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -88,6 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                     intent.putExtra("id", userRespond.getUserDetail().getId());
                     intent.putExtra("username", userRespond.getUserDetail().getUsername());
                     intent.putExtra("email", userRespond.getUserDetail().getEmail());
+                    intent.putExtra("balance", userRespond.getUserDetail().getBalance());
                     startActivity(intent);
                     finish();
                 } else {
