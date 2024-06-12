@@ -56,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button addCategory = findViewById(R.id.btnAddCategory);
+        addCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, AddCategory.class);
+                myIntent.putExtra("token", tokenFinal);
+                startActivity(myIntent);
+            }
+        });
+
         // Gọi API để lấy thông tin người dùng hiện tại
         getCurrentUser();
     }
