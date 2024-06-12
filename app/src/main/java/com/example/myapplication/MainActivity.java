@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.Models.User;
 import com.example.myapplication.Models.User;
 import com.example.myapplication.Services.UserAPI;
+import androidx.appcompat.widget.Toolbar;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -19,6 +20,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
     String tokenFinal;
     TextView tvBalance;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         tokenFinal = "Bearer " + token;
 
         tvBalance = findViewById(R.id.tvBalance);
+        toolbar = findViewById(R.id.tool_top_bar);
 
         TextView tvDanhSachThuChi = findViewById(R.id.tvDanhSachThuChi);
         tvDanhSachThuChi.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("BALANCE: "+ currentUser.getBalance());
                     // Cập nhật lại balance trong TextView
                     tvBalance.setText(String.valueOf(currentUser.getBalance()));
+                    toolbar.setSubtitle(currentUser.getUsername());
                 } else {
                     // Xử lý khi không thể lấy được thông tin người dùng hiện tại
                 }

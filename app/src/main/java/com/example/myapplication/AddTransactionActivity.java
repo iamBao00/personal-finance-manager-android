@@ -120,7 +120,7 @@ public class AddTransactionActivity extends AppCompatActivity {
     private void setupCategorySpinner(ArrayList<Category> categories) {
         ArrayList<String> displayList = new ArrayList<>();
         for (Category category : categories) {
-            String displayText = "Loại: " + category.getType() + " - " + "Tên Loại: " + category.getName();
+            String displayText = category.getName()+ "(" + category.getType() + ")";
             displayList.add(displayText);
         }
 
@@ -164,7 +164,10 @@ public class AddTransactionActivity extends AppCompatActivity {
             public void onResponse(Call<TransactionRequest> call, Response<TransactionRequest> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     // Xử lý khi thêm giao dịch thành công
-                    Toast.makeText(AddTransactionActivity.this, "Transaction added successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddTransactionActivity.this, "Thêm Thành Công", Toast.LENGTH_SHORT).show();
+                    tvAmount.setText("");
+                    tvDescription.setText("");
+                    toDate.setText("");
                 } else {
                     // Xử lý khi thêm giao dịch không thành công
                     Toast.makeText(AddTransactionActivity.this, "Failed to add transaction", Toast.LENGTH_SHORT).show();
