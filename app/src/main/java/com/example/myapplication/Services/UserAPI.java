@@ -46,6 +46,7 @@
 package com.example.myapplication.Services;
 
 import com.example.myapplication.Models.LoginRequest;
+import com.example.myapplication.Models.SignupRequest;
 import com.example.myapplication.Models.User;
 import com.example.myapplication.Models.UserRespond;
 import com.google.gson.Gson;
@@ -96,10 +97,9 @@ public interface UserAPI {
     @POST("/api/users/login")
     Call<UserRespond> login(@Body LoginRequest loginRequest);
 
+    @POST("/api/users/register")
+    Call<UserRespond> signUp(@Body SignupRequest signupRequest);
+
     @GET("/api/users/current")
     Call<User> current(@Header("Authorization") String token);
-
-    @FormUrlEncoded
-    @POST("/api/users/register")
-    Call<UserRespond> signUp(@Field("username") String username, @Field("email") String email, @Field("password") String password);
 }
