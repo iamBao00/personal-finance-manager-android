@@ -1,6 +1,7 @@
 package com.example.myapplication.Services;
 
 import com.example.myapplication.Models.LoginRequest;
+import com.example.myapplication.Models.User;
 import com.example.myapplication.Models.UserRespond;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -11,6 +12,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 public interface UserAPI {
@@ -20,7 +23,8 @@ public interface UserAPI {
             .create();
 
     UserAPI userAPI = new Retrofit.Builder()
-                    .baseUrl("http://172.20.10.2:3000/")
+                    .baseUrl("http://169.254.76.104:3000/")
+
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build().create(UserAPI.class);
 
@@ -30,6 +34,8 @@ public interface UserAPI {
     @POST("/api/users/login")
     Call<UserRespond> login(@Body LoginRequest loginRequest);
 
+    @GET("/api/users/current")
+    Call<User> current(@Header("Authorization") String token);
 
     @FormUrlEncoded
     @POST("/api/users/register")

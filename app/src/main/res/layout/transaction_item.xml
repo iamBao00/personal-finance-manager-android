@@ -25,6 +25,15 @@
         tools:ignore="SmallSp" />
 
     <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescription"
+        android:text="LOẠI"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <TextView
         android:id="@+id/tvAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

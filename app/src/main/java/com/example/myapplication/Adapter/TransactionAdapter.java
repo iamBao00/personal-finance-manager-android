@@ -42,10 +42,11 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         holder.tvDate.setText(String.valueOf(transaction.getDate()));
         holder.tvDescription.setText(transaction.getDescription());
         holder.tvCategoryName.setText(transaction.getCategoryName());
+        holder.tvType.setText("Type: " + transaction.getType());
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder{
-        private TextView tvAmount, tvDescription, tvCategoryName, tvDate;
+        private TextView tvAmount, tvDescription, tvCategoryName, tvDate, tvType;
         private RelativeLayout itemTransaction;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,7 +59,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
             tvDescription = itemView.findViewById(R.id.tvDescription);
             tvCategoryName = itemView.findViewById(R.id.tvCategoryName);
             tvDate = itemView.findViewById(R.id.tvDate);
-
+            tvType = itemView.findViewById(R.id.tvType);
             // Dung su ly su kien click vao 1 Transaction trong list
             itemTransaction = itemView.findViewById(R.id.itemTransaction);
         }

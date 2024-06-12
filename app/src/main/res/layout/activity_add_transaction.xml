@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTransactionActivity">
+
+    <LinearLayout
+        android:id="@+id/transactionCreationTitleAndButtonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/transactionCreationButtonGoBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/back_btn_background"
+            android:src="@drawable/chevron_left"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Thêm Chi Tiêu"
+            android:textColor="@color/colorNormalText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/transactionCreationContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transactionCreationTitleAndButtonBack"
+        android:padding="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--Spinner widget-->
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/custom_spinner" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <EditText
+                android:id="@+id/tvAmount"
+                style="@style/custom_input"
+                android:drawableStart="@drawable/ic_baseline_123_24"
+                android:hint="Nhập tổng tiền"
+                android:inputType="number"
+                android:textColor="@color/colorNormalText" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <EditText
+                android:id="@+id/tvDescription"
+                style="@style/custom_input"
+                android:drawableStart="@drawable/ic_baseline_local_activity_24"
+                android:hint="Nhập mô tả"
+                android:inputType="text"
+                android:textColor="@color/colorNormalText" />
+
+            <!--Category Spinner-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <EditText
+                android:id="@+id/toDate"
+                style="@style/custom_input"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_baseline_date_range_24"
+                android:focusable="false"
+                android:inputType="date"
+                android:focusableInTouchMode="false"
+                android:hint="Chọn ngày" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddTransaction"
+                style="@style/button_style"
+                android:layout_gravity="center"
+                android:text="Thêm" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

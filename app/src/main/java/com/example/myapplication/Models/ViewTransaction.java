@@ -1,22 +1,34 @@
 package com.example.myapplication.Models;
 
+import android.os.Build;
+
+import com.example.myapplication.Services.TransactionAPI;
+
 import java.time.LocalDate;
 import java.util.Date;
 
 public class ViewTransaction {
     private long amount;
     private String description;
-    private LocalDate date;
+    private String date;
     private String categoryName;
     private String type;
 
     public ViewTransaction(){}
-    public ViewTransaction(long amount, String description, LocalDate date, String categoryName, String type) {
+    public ViewTransaction(long amount, String description, String date, String categoryName, String type) {
         this.amount = amount;
         this.description = description;
         this.date = date;
         this.categoryName = categoryName;
         this.type = type;
+    }
+
+    public ViewTransaction(Transaction t, Category c){
+        this.amount = t.getAmount();
+        this.description = t.getDescription();
+        this.date = t.getDate();
+        this.categoryName = c.getName();
+        this.type = c.getType();
     }
 
     public long getAmount() {
@@ -35,11 +47,11 @@ public class ViewTransaction {
         this.description = description;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

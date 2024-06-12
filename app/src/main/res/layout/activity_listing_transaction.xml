@@ -48,20 +48,22 @@
             <EditText
                 android:id="@+id/fromDate"
                 style="@style/custom_input"
-                android:clickable="false"
+                android:clickable="true"
                 android:cursorVisible="false"
                 android:drawableStart="@drawable/ic_baseline_date_range_24"
                 android:focusable="false"
                 android:inputType="date"
                 android:focusableInTouchMode="false"
                 android:hint="Từ ngày" />
+
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
+
             <EditText
                 android:id="@+id/toDate"
                 style="@style/custom_input"
-                android:clickable="false"
+                android:clickable="true"
                 android:cursorVisible="false"
                 android:drawableStart="@drawable/ic_baseline_date_range_24"
                 android:focusable="false"
@@ -71,6 +73,7 @@
         </LinearLayout>
     </ScrollView>
     <Button
+        android:id="@+id/btnFilterByDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
