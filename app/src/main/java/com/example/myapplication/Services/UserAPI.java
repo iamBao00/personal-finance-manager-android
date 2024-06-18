@@ -89,7 +89,7 @@ public interface UserAPI {
             .build();
 
     UserAPI userAPI = new Retrofit.Builder()
-            .baseUrl("http://169.254.76.104:3000/")
+            .baseUrl("http://172.20.10.2:3000/")
             .client(okHttpClient)  // sử dụng OkHttpClient với Interceptor
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build().create(UserAPI.class);

@@ -25,7 +25,7 @@ public interface CategoryAPI {
             .create();
 
     CategoryAPI categoryAPI = new Retrofit.Builder()
-            .baseUrl("http://169.254.76.104:3000/")
+            .baseUrl("http://172.20.10.2:3000/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build().create(CategoryAPI.class);
     @GET("/api/category/")
